@@ -16,12 +16,9 @@ struct InformationScreen: View {
         Group {
             
             if viewmodel.details.isEmpty {
-                
-                VStack(spacing:8){
-                    ProgressView()
-                    Text("Fetching Details")
-                    
-                }
+            
+                LoadingView(text: "Fetching Details")
+            
             } else {
                 List{
                     ForEach(viewmodel.details, id: \.firstname){ item in

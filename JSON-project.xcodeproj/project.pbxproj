@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3CC6293B2717A962006F516B /* JSON_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC6293A2717A962006F516B /* JSON_projectApp.swift */; };
-		3CC6293D2717A962006F516B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC6293C2717A962006F516B /* ContentView.swift */; };
 		3CC6293F2717A967006F516B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC6293E2717A967006F516B /* Assets.xcassets */; };
 		3CC629422717A967006F516B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC629412717A967006F516B /* Preview Assets.xcassets */; };
 		3CC6294A2717A9B9006F516B /* APIconstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC629492717A9B9006F516B /* APIconstants.swift */; };
@@ -18,12 +17,12 @@
 		3CD1CB0827185CCB00EA693A /* DetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1CB0727185CCB00EA693A /* DetailsService.swift */; };
 		3CD1CB0B2718618500EA693A /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1CB0A2718618500EA693A /* DetailsViewModel.swift */; };
 		3CD1CB0E27186DB700EA693A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1CB0D27186DB700EA693A /* LoadingView.swift */; };
+		3CD1CB122718966D00EA693A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1CB112718966D00EA693A /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3CC629372717A962006F516B /* JSON-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSON-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC6293A2717A962006F516B /* JSON_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON_projectApp.swift; sourceTree = "<group>"; };
-		3CC6293C2717A962006F516B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3CC6293E2717A967006F516B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CC629412717A967006F516B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3CC629492717A9B9006F516B /* APIconstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIconstants.swift; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		3CD1CB0727185CCB00EA693A /* DetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsService.swift; sourceTree = "<group>"; };
 		3CD1CB0A2718618500EA693A /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		3CD1CB0D27186DB700EA693A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3CD1CB112718966D00EA693A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				3CC6294B2717AAAD006F516B /* Feature */,
 				3CC629482717A985006F516B /* Constants */,
 				3CC6293A2717A962006F516B /* JSON_projectApp.swift */,
-				3CC6293C2717A962006F516B /* ContentView.swift */,
+				3CD1CB112718966D00EA693A /* ContentView.swift */,
 				3CC6293E2717A967006F516B /* Assets.xcassets */,
 				3CC629402717A967006F516B /* Preview Content */,
 			);
@@ -230,12 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC6293D2717A962006F516B /* ContentView.swift in Sources */,
 				3CC6294A2717A9B9006F516B /* APIconstants.swift in Sources */,
 				3CD1CB0827185CCB00EA693A /* DetailsService.swift in Sources */,
 				3CD1CB0B2718618500EA693A /* DetailsViewModel.swift in Sources */,
 				3CC629502717AB22006F516B /* Deatil.swift in Sources */,
 				3CC629552717AF83006F516B /* InformationScreen.swift in Sources */,
+				3CD1CB122718966D00EA693A /* ContentView.swift in Sources */,
 				3CC6293B2717A962006F516B /* JSON_projectApp.swift in Sources */,
 				3CC6295A2717B687006F516B /* Detailview.swift in Sources */,
 				3CD1CB0E27186DB700EA693A /* LoadingView.swift in Sources */,
