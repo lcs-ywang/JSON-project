@@ -12,15 +12,31 @@ struct InformationScreen: View {
     @StateObject private var viewmodel = DetailsViewModelImpl(service: DetailsServiceImpl())
     
     var body: some View {
-        List{
-            ForEach(Detail.dummydata, id: \.firstname){ item in
-             
-                Detailview(item: item)
+        
+        Group {
             
+            if viewmodel.details.isEmpty {
+                
+                VStack(spacing:8){
+                    ProgressView()
+                    Text("Fetching Details")
+                    
+                }
+            } else {
+                List{
+                    ForEach(viewmodel.details, id: \.firstname){ item in
+                     
+                        Detailview(item: item)
+                    
+                    }
+                }
+                
             }
+        
         }
         .task {
             await viewmodel.getRandomDetails()
+        
         }
    
     }
