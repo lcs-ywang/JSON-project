@@ -10,5 +10,5 @@ import Foundation
 
 
 enum APIconstants {
-    static let baseUrl = "https:// google"
+    static var baseUrl = "https://fakerapi.it/api/v1/users?_quantity=1&_gender=male"
 }
