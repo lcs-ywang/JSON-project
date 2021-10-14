@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InformationScreen: View {
+    
+    @StateObject private var viewmodel = DetailsViewModelImpl(service: DetailsServiceImpl())
+    
     var body: some View {
         List{
             ForEach(Detail.dummydata, id: \.firstname){ item in
@@ -15,6 +18,9 @@ struct InformationScreen: View {
                 Detailview(item: item)
             
             }
+        }
+        .task {
+            await viewmodel.getRandomDetails()
         }
    
     }
