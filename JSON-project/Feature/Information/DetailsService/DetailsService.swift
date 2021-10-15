@@ -16,7 +16,10 @@ final class DetailsServiceImpl: DetailsService {
         let urlSession = URLSession.shared
         let url = URL(string: APIconstants.baseUrl.appending("/api/Details"))
         let (data, _) = try await urlSession.data(from: url!)
-        return try JSONDecoder().decode(JsonData.self, from: data)
+        
+        let parsedData = try JSONDecoder().decode(JsonData.self, from: data)
+        dump(parsedData)
+        return parsedData
     }
     
 }
