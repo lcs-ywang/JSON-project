@@ -13,15 +13,15 @@ struct InformationScreen: View {
     
     var body: some View {
         
-        Group {
+        VStack {
             
             if viewmodel.details.isEmpty {
-            
-                LoadingView(text: "Fetching Details")
+            ProgressView()
+//                LoadingView(text: "Fetching Details")
             
             } else {
                 List{
-                    ForEach(viewmodel.details, id: \.firstname){ item in
+                    ForEach(viewmodel.details, id: \.data){ item in
                      
                         Detailview(item: item)
                     

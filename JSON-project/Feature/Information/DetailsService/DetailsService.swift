@@ -8,15 +8,15 @@
 import Foundation
 
 protocol DetailsService {
-    func fetchRandomDetails() async throws -> [Detail]
+    func fetchRandomDetails() async throws -> JsonData
 }
 
 final class DetailsServiceImpl: DetailsService {
-    func fetchRandomDetails() async throws -> [Detail] {
+    final func fetchRandomDetails() async throws -> JsonData {
         let urlSession = URLSession.shared
         let url = URL(string: APIconstants.baseUrl.appending("/api/Details"))
         let (data, _) = try await urlSession.data(from: url!)
-        return try JSONDecoder().decode([Detail].self, from: data)
+        return try JSONDecoder().decode(JsonData.self, from: data)
     }
     
 }

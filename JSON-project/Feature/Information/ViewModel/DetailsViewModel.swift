@@ -11,8 +11,8 @@ protocol DetailsViewModel: ObservableObject {
     func getRandomDetails() async
 }
 @MainActor
-final class DetailsViewModelImpl: DetailsViewModel {
-    @Published private(set) var details: [Detail] = []
+final class DetailsViewModelImpl: DetailsViewModel, ObservableObject {
+    @Published private(set) var details: [JsonData] = []
     private let service: DetailsService
     init(service: DetailsService){
         self.service = service
@@ -20,7 +20,9 @@ final class DetailsViewModelImpl: DetailsViewModel {
     }
     func getRandomDetails() async {
         do{
-            self.details = try await service.fetchRandomDetails()
+            let dataDetail = try await service.fetchRandomDetails()
+            
+            details.append(dataDetail)
         } catch {
             print(error)
         }

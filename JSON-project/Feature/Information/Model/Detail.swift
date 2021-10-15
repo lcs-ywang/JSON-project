@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Detail: Decodable {
+struct Detail: Decodable, Hashable {
+    let UUID: UUID
     let firstname: String
     let lastname: String
     let username: String
@@ -19,10 +20,12 @@ struct Detail: Decodable {
     let image: String
 }
 
-extension Detail {
-    static let dummydata: [Detail] = [
-        
-        Detail(firstname: "a", lastname: "a", username: "a", password: "a", email: "a", ip: "a", macAddress: "a", website: "a", image: "a")
-    
-    ]
+struct JsonData: Decodable {
+
+
+    var status: String
+    var code: Int
+    var total: Int
+    var data: [String: String]
 }
+

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Detailview: View {
     
-    let item: Detail
+    let item: JsonData
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -17,10 +17,11 @@ struct Detailview: View {
             HStack{
                 Image(systemName: "tv")
                     .font(.system(size: 12, weight: .black))
-                Text(item.firstname)
+                Text(item.status)
+//                Text(item.data)
             }
-            Text(makeAttributedString(title:"username", label: item.username))
-            Text(makeAttributedString(title:"Lastname", label: item.lastname))
+//            Text(makeAttributedString(title:"username", label: item.data.username))
+//            Text(makeAttributedString(title:"Lastname", label: item.data.lastname))
             lineLimit(2)
         }
         
@@ -41,8 +42,4 @@ struct Detailview: View {
     }
 }
 
-struct Detailview_Previews: PreviewProvider {
-    static var previews: some View {
-        Detailview(item: Detail.dummydata.first!)
-    }
-}
+
