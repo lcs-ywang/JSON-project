@@ -17,11 +17,11 @@ struct Detailview: View {
             HStack{
                 Image(systemName: "tv")
                     .font(.system(size: 12, weight: .black))
-                Text(item.status)
-//                Text(item.data)
+//                Text(item.status)
+                Text(item.data)
             }
-//            Text(makeAttributedString(title:"username", label: item.data.username))
-//            Text(makeAttributedString(title:"Lastname", label: item.data.lastname))
+            Text(makeAttributedString(title:"Username", label: item.data.firstname))
+            Text(makeAttributedString(title:"Lastname", label: item.data.lastname))
             lineLimit(2)
         }
         

@@ -17,7 +17,7 @@ struct InformationScreen: View {
             
             if viewmodel.details.isEmpty {
             ProgressView()
-//                LoadingView(text: "Fetching Details")
+                LoadingView(text: "Fetching Details")
             
             } else {
                 List{
