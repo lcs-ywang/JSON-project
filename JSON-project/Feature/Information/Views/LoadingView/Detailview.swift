@@ -10,26 +10,31 @@ import SwiftUI
 struct Detailview: View {
     
     let item: JsonData
-    @State var updater: Bool = false
+//    @State var updater: Bool = false
     @StateObject private var viewmodel = DetailsViewModelImpl(service: DetailsServiceImpl())
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             
-            VStack{
-                Image(systemName: "person")
-                    .font(.system(size: 12, weight: .black))
-                ForEach(item.data, id:\.uuid) {
-                    detailData in
-                    Text(detailData.firstname)
-                    Text(detailData.lastname)
-                    Text(detailData.username)
-                    Text(detailData.password)
-                    Text(detailData.email)
-//                    Text(detailData.ip)
-//                    Text(detailData.macAddress)
-//                    Text(detailData.website)
-//                    Text(detailData.image)
-//
+            HStack{
+                
+//                Image(systemName: "person")
+//                    .font(.system(size: 25, weight: .black))
+                VStack{
+                    
+                    ForEach(item.data, id:\.uuid) {
+                        detailData in
+                        Text("First Name: \n" + detailData.firstname + "\n").fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                        Text("Last Name: \n" + detailData.lastname + "\n").fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                        Text("User Name: \n" + detailData.username + "\n").fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                        Text("Password: \n" + detailData.password + "\n").fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                        Text("Email: \n" + detailData.email + "\n").fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                        Text("IP: \n" + detailData.ip + "\n").fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                        Text("Mac Address: " + detailData.macAddress + "\n").fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                        Text("Website: \n" + detailData.website + "\n").fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                        AsyncImage(url: URL(string: detailData.image)!)
+    //
+                }
+              
                 }
                
 //                Text(item.data)

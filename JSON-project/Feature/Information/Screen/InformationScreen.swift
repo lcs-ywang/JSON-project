@@ -16,7 +16,7 @@ struct InformationScreen: View {
         VStack {
             
             if viewmodel.details.isEmpty {
-            ProgressView()
+    
                 LoadingView(text: "Fetching Details")
             
             } else {
