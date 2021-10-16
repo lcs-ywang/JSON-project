@@ -27,5 +27,9 @@ final class DetailsViewModelImpl: DetailsViewModel, ObservableObject {
             print(error)
         }
     }
+    
+    func addItem() async {
+       await getRandomDetails()
+    }
 }
 
