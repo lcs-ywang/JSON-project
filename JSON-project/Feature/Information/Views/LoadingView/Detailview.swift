@@ -11,21 +11,27 @@ struct Detailview: View {
     
     let item: JsonData
     @State var updater: Bool = false
-    
+    @StateObject private var viewmodel = DetailsViewModelImpl(service: DetailsServiceImpl())
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             
-            HStack{
-                Image(systemName: "tv")
+            VStack{
+                Image(systemName: "person")
                     .font(.system(size: 12, weight: .black))
-                Text(item.status)
                 ForEach(item.data, id:\.uuid) {
                     detailData in
                     Text(detailData.firstname)
+                    Text(detailData.lastname)
+                    Text(detailData.username)
+                    Text(detailData.password)
+                    Text(detailData.email)
+//                    Text(detailData.ip)
+//                    Text(detailData.macAddress)
+//                    Text(detailData.website)
+//                    Text(detailData.image)
+//
                 }
-                Button("Refresh") {
-                    updater.toggle()
-                }
+               
 //                Text(item.data)
             }
 //            Text(makeAttributedString(title:"Username", label: item.data.firstname))
@@ -35,6 +41,8 @@ struct Detailview: View {
         
         .padding()
         .foregroundColor(.black)
+        
+       
     }
     
 //    private func makeAttributedString(title: String, label: String) -> AttributedString{
